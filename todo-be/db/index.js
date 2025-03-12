@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://darshan22:Onepiece227@cluster0.1fvfl.mongodb.net/practice_todo_list"
-);
+mongoose.connect(process.env.MONGO_URI);
 
 const TodoSchema = new mongoose.Schema({
   task: String,
